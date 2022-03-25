@@ -7,7 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "CI=1 react-scripts test",
+    "pre:push": "lerna run test --stream" 
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/dezkareid/lerna-monorepo-post#readme",
   "devDependencies": {
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
   }
 }
